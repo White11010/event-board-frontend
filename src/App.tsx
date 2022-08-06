@@ -19,7 +19,7 @@ const theme = createTheme({
 	},
 });
 
-function App() {
+const App = () => {
 	const onButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 		console.log(e);
 	};
@@ -42,7 +42,7 @@ function App() {
 			</div>
 		</ThemeProvider>
 	);
-}
+};
 
 export default App;
 
