@@ -6,7 +6,6 @@ import styles from './App.module.scss';
 function App() {
 	const onButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 		console.log(e);
-		console.log('hui');
 	};
 
 	return (
@@ -14,10 +13,11 @@ function App() {
 			<EBButton
 				onClick={onButtonClick}
 			>
-				knopka nahui
+				Button
 			</EBButton>
 		</div>
 	);
 }
 
 export default App;
+

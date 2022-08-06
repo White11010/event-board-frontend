@@ -21,6 +21,7 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "@typescript-eslint/no-explicit-any": ["error"],
     "indent": [
       "error",
       "tab"
@@ -32,6 +33,9 @@
     "semi": [
       "error",
       "always"
-    ]
+    ],
+    "react/no-multi-comp": 2,
+    "react/hook-use-state": 2,
+    "react/no-array-index-key": 2
   }
 }
