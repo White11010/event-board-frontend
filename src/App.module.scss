@@ -5,3 +5,11 @@
   align-items: center;
   gap: 16px;
 }
+
+.testForm {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}

@@ -1,8 +1,14 @@
 import React from 'react';
+import {Route, Routes} from 'react-router';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 
-import EBButton from './components/UI/buttons/EBButton/EBButton';
-import styles from './App.module.scss';
+import styles from './App.module.scss';\
+// Route components
+import Home from './pages/Home/Home';
+import Profile from './pages/Profile/Profile';
+import Auth from './pages/Auth/Auth';
+import Event from './pages/Event/Event';
+import NotFound from './pages/NotFound/NotFound';
 
 const theme = createTheme({
 	palette: {
@@ -20,25 +26,16 @@ const theme = createTheme({
 });
 
 const App = () => {
-	const onButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-		console.log(e);
-	};
-
 	return (
 		<ThemeProvider theme={theme}>
 			<div className={styles.App}>
-				<EBButton
-					color='primary'
-					onClick={onButtonClick}
-				>
-					Primary
-				</EBButton>
-				<EBButton
-					color='secondary'
-					onClick={onButtonClick}
-				>
-					Secondary
-				</EBButton>
+				<Routes>
+					<Route path={'/'} element={<Home />} />
+					<Route path={'/profile'} element={<Profile />} />
+					<Route path={'/auth'} element={<Auth />} />
+					<Route path={'/event/:id'} element={<Event />} />
+					<Route path={'*'} element={<NotFound />} />
+				</Routes>
 			</div>
 		</ThemeProvider>
 	);

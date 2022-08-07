@@ -2,22 +2,20 @@ import React from 'react';
 import MUIButton from '@mui/material/Button';
 
 import type {TButtonColor} from '../models/button-color.type';
-import styles from './EBButton.module.scss';
+import styles from './EBSubmitButton.module.scss';
 
-interface IEBButtonProps {
+interface IEBSubmitButtonProps {
 	color?: TButtonColor,
 	children: string,
-	onClick: (e: React.MouseEvent<HTMLButtonElement>) => void,
 }
 
-const EBButton: React.FC<IEBButtonProps> = ({color = 'secondary', children, onClick}) => {
+const EBSubmitButton: React.FC<IEBSubmitButtonProps> = ({color = 'secondary', children}) => {
 	return (
 		<MUIButton
-			className={styles.button}
+			className={styles.submitButton}
 			color={color}
+			type={'submit'}
 			variant="contained"
-			type={'button'}
-			onClick={onClick}
 			sx={{
 				borderRadius: '17px',
 			}}
@@ -27,4 +25,4 @@ const EBButton: React.FC<IEBButtonProps> = ({color = 'secondary', children, onCl
 	);
 };
 
-export default EBButton;
+export default EBSubmitButton;
