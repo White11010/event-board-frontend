@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, Routes} from 'react-router';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 
-import styles from './App.module.scss';\
+import styles from './App.module.scss';
 // Route components
 import Home from './pages/Home/Home';
 import Profile from './pages/Profile/Profile';
